@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* background-image: url('https://www.xtrafondos.com/wallpapers/resized/textura-de-madera-2927.jpg?s=large');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; */
+  background-color: #ffffff;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+:root {
+  --primary: #0F3D3E;
+  --secundary: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

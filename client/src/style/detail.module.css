@@ -1,0 +1,233 @@
+.conteiner{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://image.shutterstock.com/image-vector/dog-bone-seamless-pattern-vector-260nw-1404801773.jpg');
+}
+
+.divDetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 83%;
+    height: 93%;
+    background-color: var(--primary);
+    border-radius: 13px;
+}
+
+.divDetail h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'DynaPuff', cursive;
+}
+
+.divImg {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-top: 3%;
+}
+
+.img {
+    width: 40%;
+    height: 90%;
+    border-radius: 7px;
+    filter: contrast(110%);
+    transition: 1s;
+    
+}
+
+.divInfo {
+    width: 85%;
+    height: 45%;
+}
+
+.divInfo p {
+    margin-top: 50px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divBtn {
+    width: 100%;
+}
+
+.divBtn button {
+    width: 20%;
+    border-radius: 5px;
+    height: 130%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.6s;
+}
+
+.divBtn button:hover {
+    background-color: #0c7475;
+    color: white;
+}
+
+.divLoading{
+    width: 90%;
+    height: 90%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 755px) {
+   
+    .divDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        width: 90%;
+        height: 93%;
+        background-color: var(--primary);
+        border-radius: 13px;
+    }
+    
+    .divImg {
+        width: 100%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-top: 3%;
+    }
+
+    .img {
+        width: 100%;
+        height: 90%;
+        border-radius: 7px;
+        filter: contrast(110%);
+        transition: 1s;
+        
+    }
+}
+
+@media only screen and (max-width: 505px) {
+   
+    .divDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        width: 90%;
+        height: 93%;
+        background-color: var(--primary);
+        border-radius: 13px;
+    }
+    
+    .divImg {
+        width: 100%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-top: 0%;
+    }
+
+    .img {
+        width: 100%;
+        height: 90%;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        filter: contrast(110%);
+        transition: 1s;
+    }
+
+    .divInfo p {
+        margin-top: 50px;
+        font-size: 1.1rem;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+   
+    .divDetail {
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline   ;
+        align-items: center;
+        padding: 5px;
+        width: 94%;
+        height: 95%;
+        background-color: var(--primary);
+        border-radius: 13px;
+    }
+    
+    .divImg {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-top: 0%;
+    }
+
+    .img {
+        width: 100%;
+        height: 90%;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        filter: contrast(110%);
+        transition: 1s;
+    }
+
+    .divInfo p {
+        margin-top: 0px;
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .divBtn {
+        width: 100%;
+        height: 5%;
+    }
+    
+    .divBtn button {
+        width: 20%;
+        border-radius: 5px;
+        height: 100%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: var(--primary);
+        font-weight: bold;
+        font-size: 1rem;
+        transition: 0.6s;
+    }
+
+    .divDetail h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        font-family: 'DynaPuff', cursive;
+    }
+}
