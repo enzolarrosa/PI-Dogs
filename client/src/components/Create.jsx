@@ -24,10 +24,7 @@ function validate (input) {
     if(input.height1.length === 0 || input.height2.length === 0) {
         error.height= 'Write a height'
     }
-    if(input.temperament.length ===0) {
-        error.temperament = 'Choose a Temperament'
-    }
-
+    
     return error
 }
 
@@ -92,8 +89,7 @@ export default function Create () {
         if(err.name) { return alert(err.name)}
         if(err.height) { return alert(err.height)}
         if(err.weight) { return alert(err.weight)}
-        if(err.temperament) {return alert(err.temperament)}
-        if(err.length === 0){            
+        if(!err.length){            
             dispatch(postDog(input))
             history.push('/home')
         }
