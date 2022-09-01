@@ -1,6 +1,7 @@
 import React from "react";
 import c from '../style/card.module.css'
 import { Link } from "react-router-dom";
+import nicky from '../img/nicky.jpg'
 
 
 export default function Card ({id, name , img , weight, temperaments}) {
@@ -8,7 +9,7 @@ export default function Card ({id, name , img , weight, temperaments}) {
     const temp= temperaments.map(e => {return e.name})
       return (
         <div key={id} className={c.conteiner} >
-             <div className={c.divImg}>{img && <img className={c.img} src={img} alt='dog' />}</div>
+             <div className={c.divImg}><img className={c.img} src={img? img : nicky } alt='dog' /></div>
              <div className={c.divP}>
              <h1>{name.toUpperCase()}</h1>
              <div className={c.divP}>

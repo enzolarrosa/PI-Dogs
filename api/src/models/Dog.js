@@ -16,7 +16,6 @@ module.exports = (sequelize) => {
     },
     img: {
       type: DataTypes.STRING,
-      defaultValue: "https://i.pinimg.com/736x/9a/ca/69/9aca6916ed98237d08c956e319bc51e0.jpg",
     },
     height: {
       type: DataTypes.STRING,

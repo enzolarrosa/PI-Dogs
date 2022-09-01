@@ -9,7 +9,9 @@ const allApi = async () => {
       id: e.id,
       name: e.name,
       img: e.image.url,
+      height: e.height.metric,
       weight: e.weight.metric,
+      lifeSpan: e.life_span,
       temperaments: temp.map((el) => {
         return { name: el };
       }),
@@ -41,6 +43,7 @@ const allDog = async () => {
 const idAll = async (id) => {
   const info = await axios.get("https://api.thedogapi.com/v1/breeds?limit=100");
   const final = await info.data.map((e) => {
+    const temp = e.temperament.toLowerCase().split(",").join("").split(" ");
     return {
       id: e.id,
       name: e.name,
@@ -48,11 +51,24 @@ const idAll = async (id) => {
       height: e.height.metric,
       weight: e.weight.metric,
       lifeSpan: e.life_span,
-      temperaments: e.temperament,
+      temperaments: temp.map((el) => {
+        return { name: el };
+      }),
     };
   });
-  const dog = final.concat(allDb());
-  const filt = dog.find((el) => el.id == id);
+  if(id.includes('-')){
+    const dog = await Dog.findByPk(id , {
+      include: {
+        model: Temperament,
+        attributes: ["name"],
+        through: {
+          attributes: [],
+        },
+      },
+    })
+    return dog
+  }
+  const filt = final.find((el) => el.id == id);
   return filt;
 };
 

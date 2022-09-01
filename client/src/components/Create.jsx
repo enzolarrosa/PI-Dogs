@@ -6,6 +6,7 @@ import img from '../img/logoCreate.png'
 import c from '../style/create.module.css'
 
 
+
 function validate (input) {
     const vName = /^[a-zA-Z\s]+$/ ;
     let error = {}
@@ -37,12 +38,12 @@ export default function Create () {
     const [input , setInput] = useState({
         name: '',
         img: '',
-        height1: [],
-        height2: [],
-        weight1: [],
-        weight2: [],
-        lifeSpan1: [],
-        lifeSpan2: [],
+        height1: '',
+        height2: '',
+        weight1: '',
+        weight2: '',
+        lifeSpan1: '',
+        lifeSpan2: '',
         temperament: [],
     })
 
@@ -94,6 +95,8 @@ export default function Create () {
             history.push('/home')
         }
     }
+
+    console.log('height1 :' + input.height1  )
     
     return (
         <div className={c.conteiner}>
