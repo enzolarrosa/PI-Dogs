@@ -25,7 +25,7 @@ export default function Detail() {
           
              <div  className={d.divImg}>
              <h1>{detail.name}</h1>
-               <img  className={d.img} src={detail.img? detail.img: nicky} alt='detail' />
+               <img  className={d.img} src={detail.img.length > 10 ? detail.img: nicky} alt='detail' />
              </div>
              <div  className={d.divInfo}>
                <p>{detail.name} , has a height between {detail.height} CM  and While their weight is between {detail.weight} KG . The life expectancy of these dear friends is {detail.lifeSpan} .  The temperaments that qualify this breed or dog are : {temp} . </p>

@@ -19,7 +19,7 @@
 }
 
 .divMuestra{
-    width: 333px;
+    width: 433px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -76,7 +76,7 @@
 }
 
 .form {
-    width: 420px;
+    width: 450px;
     border: 4px solid var(--primary);
     border-radius: 10px;
     margin: 2.2%;

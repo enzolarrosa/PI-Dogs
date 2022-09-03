@@ -9,7 +9,7 @@ export default function Card ({id, name , img , weight, temperaments}) {
     const temp= temperaments.map(e => {return e.name})
       return (
         <div key={id} className={c.conteiner} >
-             <div className={c.divImg}><img className={c.img} src={img? img : nicky } alt='dog' /></div>
+             <div className={c.divImg}><img className={c.img} src={img.length > 10 ? img : nicky } alt='dog' /></div>
              <div className={c.divP}>
              <h1>{name.toUpperCase()}</h1>
              <div className={c.divP}>

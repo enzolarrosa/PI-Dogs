@@ -25,6 +25,7 @@
     color: var(--primary);
     font-size: 0.9rem;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .divImg {
@@ -92,6 +93,11 @@
         align-items: flex-end;
     }
 
+    .conteiner h1 {
+        font-size: 0.8rem;
+
+    }
+
 
 }
 
@@ -100,8 +106,8 @@
     .conteiner {
         border: 3px solid var(--primary);
         background-color: white;
-        width: 250px;
-        height: 370px;
+        width: 260px;
+        height: 380px;
         border-radius: 15px;
         padding: 3px;
         margin-bottom: 20px;
@@ -130,7 +136,7 @@
         width: 100%;
         height: 30px;
         color: var(--primary);
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: bold;
     }
 }
