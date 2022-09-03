@@ -40,7 +40,8 @@
     }
 
     .li button {
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 
     .ul {
@@ -60,7 +61,8 @@
     }
 
     .li button {
-        width: 100%;
+        width: 30px;
+        height: 30px;
         font-size: 0.7rem;
     }
 
