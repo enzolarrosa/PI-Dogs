@@ -29,8 +29,8 @@ let sequelize=
     },
     ssl: true,
    })
-   : new Sequelize(
-    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
+   :new Sequelize(
+    DB_DEPLOY,
     {logging: false , native: false}
    );
 
