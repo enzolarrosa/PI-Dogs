@@ -32,7 +32,7 @@ let sequelize=
   //  })
   //  :
    new Sequelize(
-    DB_DEPLOY,
+    `postgresql://postgres:${DB_PASSWORD}@containers-us-west-113.railway.app:7427/railway`,
     {logging: false , native: false}
    );
 
