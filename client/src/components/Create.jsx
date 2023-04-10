@@ -123,19 +123,19 @@ export default function Create () {
                 {err.name && <div className={c.divH5} > <h5>{err.name}</h5></div>}
                 </div>
                 <label>Height: </label>
-                <div>
+                <div className={c.divInput}>
                 <input type='number' name='height1' placeholder="Height Min"  onChange={(e) => handleInput(e) } />
                 <input type='number' name='height2' placeholder="Height Max" onChange={(e) => handleInput(e) } />
                 {err.height && <div className={c.divH5} > <h5>{err.height}</h5></div>}
                 </div>
                 <label>Weight: </label>
-                <div>
+                <div className={c.divInput}>
                 <input type='number' name='weight1' placeholder="Weight Min"  onChange={(e) => handleInput(e) } />
                 <input type='number' name='weight2' placeholder="Weight Min" onChange={(e) => handleInput(e) } />
                 {err.weight && <div className={c.divH5}> <h5>{err.weight}</h5></div>}
                 </div>
                 <label>Life Span: </label>
-                <div>
+                <div className={c.divInput}>
                 <input type='text' name='lifeSpan1'  onChange={(e) => handleInput(e) } />
                 <input type='text' name='lifeSpan2' onChange={(e) => handleInput(e) } />
                 </div>
