@@ -86,20 +86,19 @@ export default function Home() {
             </div>
 
 
-            { typeof currentDogs === 'object' ?
-            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : <Pagination dogsPage={dogsPage} dogs={0} paginado={paginado} />  }
+            { currentDogs.length ?
+            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : '' }
             <div className={h.contCard}>
             <div className={h.cards}>
-                {typeof currentDogs != 'object' || currentDogs.length===0 ? <div className={h.divLoading}>
-                    <img width='300px' heigth='300px' alt="esperando" src="https://i.pinimg.com/originals/8c/21/96/8c2196780eb48b18fcce2de130a213bb.gif"/> </div> : currentDogs.map(e =>{
+                {typeof currentDogs != 'object' || currentDogs.length===0 ? <div className={h.divLoading}><img width='300px' heigth='300px' alt="esperando" src="https://i.pinimg.com/originals/8c/21/96/8c2196780eb48b18fcce2de130a213bb.gif"/> </div> : currentDogs.map(e =>{
                     return(
                         <Card key={e.id} id={e.id} name={e.name} img={e.img} weight={e.weight} temperaments={e.temperaments}   />
                     )
                 })}
             </div>
             </div>
-            { typeof currentDogs === 'object' ?
-            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : <Pagination dogsPage={dogsPage} dogs={0} paginado={paginado} />  }
+            { currentDogs.length ?
+            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : ''  }
         </div>
     )
 }
