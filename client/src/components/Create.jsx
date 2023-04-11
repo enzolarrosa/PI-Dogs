@@ -33,7 +33,6 @@ export default function Create () {
     const dispatch = useDispatch()
     const allTemp = useSelector(state => state.temperament)
     const [err, setErr] = useState({})
-    const [btn, setBtn] = useState(true)
     const history = useHistory()
     const [input , setInput] = useState({
         name: '',
@@ -69,13 +68,12 @@ export default function Create () {
     function handleTempe(e) {
         e.preventDefault()
         if(!input.temperament.includes(e.target.value)){
+            if(input.temperament.length === 5) return;
             setInput({
                 ...input,
                 temperament: [...input.temperament, e.target.value]
             })
         }
-
-        setBtn(false)
     }
     
     function handleDelete(e) {
@@ -119,29 +117,29 @@ export default function Create () {
             <h3>Create You Dog</h3>
                 <label>Name: </label>
                 <div className={c.inputName}>
-                <input type='text' name='name' onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='text' name='name' onChange={(e) => handleInput(e) } />
                 {err.name && <div className={c.divH5} > <h5>{err.name}</h5></div>}
                 </div>
                 <label>Height: </label>
                 <div className={c.divInput}>
-                <input type='number' name='height1' placeholder="Height Min"  onChange={(e) => handleInput(e) } />
-                <input type='number' name='height2' placeholder="Height Max" onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='number' name='height1' placeholder="Height Min"  onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='number' name='height2' placeholder="Height Max" onChange={(e) => handleInput(e) } />
                 {err.height && <div className={c.divH5} > <h5>{err.height}</h5></div>}
                 </div>
                 <label>Weight: </label>
                 <div className={c.divInput}>
-                <input type='number' name='weight1' placeholder="Weight Min"  onChange={(e) => handleInput(e) } />
-                <input type='number' name='weight2' placeholder="Weight Min" onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='number' name='weight1' placeholder="Weight Min"  onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='number' name='weight2' placeholder="Weight Min" onChange={(e) => handleInput(e) } />
                 {err.weight && <div className={c.divH5}> <h5>{err.weight}</h5></div>}
                 </div>
                 <label>Life Span: </label>
                 <div className={c.divInput}>
-                <input type='text' name='lifeSpan1'  onChange={(e) => handleInput(e) } />
-                <input type='text' name='lifeSpan2' onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='text' name='lifeSpan1'  onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='text' name='lifeSpan2' onChange={(e) => handleInput(e) } />
                 </div>
                 <label>URL image: </label>
                 <div className={c.inputName}>
-                <input type='text' name='img' placeholder="It's not mandatory" onChange={(e) => handleInput(e) } />
+                <input autoComplete='off' type='text' name='img' placeholder="It's not mandatory" onChange={(e) => handleInput(e) } />
                 </div>
                 <label>Temperaments: </label>
                 <div className={c.inputName}>
@@ -159,7 +157,7 @@ export default function Create () {
                 <Link to='/home'>
                 <button>Back</button>
                 </Link>
-                <button type="submit" disabled={btn} >Submit</button>
+                <button type="submit" >Submit</button>
             </div>
             </form>
         </div>
