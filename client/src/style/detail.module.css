@@ -1,5 +1,5 @@
 .conteiner{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -59,12 +59,13 @@
 
 .divBtn {
     width: 100%;
+    height: 10%;
 }
 
 .divBtn button {
     width: 20%;
     border-radius: 5px;
-    height: 130%;
+    height: 70%;
     border: none;
     outline: none;
     cursor: pointer;
