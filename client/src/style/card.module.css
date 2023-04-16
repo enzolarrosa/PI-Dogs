@@ -65,16 +65,19 @@
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 790px) {
 
-    .conteiner {
-        border: 3px solid var(--primary);
-        background-color: white;
-        width: 200px;
-        height: 350px;
-        border-radius: 15px;
-        padding: 3px;
-        margin-bottom: 20px;
+    .conteiner{
+        width: 45%;
+        height: 26rem;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    
+    .conteiner{
+        width: 47%;
+        height: 23rem;
     }
 
     .divImg {
@@ -103,16 +106,18 @@
 
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 496px) {
+    .conteiner{
+        width: 55%;
+        height: 23rem;
+    }
+}
 
-    .conteiner {
-        border: 3px solid var(--primary);
-        background-color: white;
-        width: 260px;
-        height: 380px;
-        border-radius: 15px;
-        padding: 3px;
-        margin-bottom: 20px;
+@media only screen and (max-width: 380px) {
+
+    .conteiner{
+        width: 80%;
+        height: 23rem;
     }
 
     .divImg {

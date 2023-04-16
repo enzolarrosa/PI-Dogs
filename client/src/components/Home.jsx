@@ -11,6 +11,7 @@ export default function Home() {
     
     const dispatch= useDispatch()
     const dogs= useSelector(state => state.dog)
+    const [index , setIndex] = useState(1)
     const [page, setPage] = useState(1)
     const [dogsPage ,] = useState(8)
     const lastDogs= page * dogsPage 
@@ -21,6 +22,7 @@ export default function Home() {
 
     const paginado = (pageNumber) => {
         setPage(pageNumber)
+        setIndex(pageNumber)
     }
 
     useEffect(() => {
@@ -33,18 +35,21 @@ export default function Home() {
         e.preventDefault()
         dispatch(filterCreate(e.target.value))
         setPage(1)
+        setIndex(1)
     }
 
     function handleTemp (e) {
         e.preventDefault()
         dispatch(filterTemp(e.target.value))
         setPage(1)
+        setIndex(1)
     }
 
     function handleOrderName (e) {
         e.preventDefault()
         dispatch(orderName(e.target.value))
         setPage(1)
+        setIndex(1)
         setOrder(`${e.target.value}`)
     }
 
@@ -52,6 +57,7 @@ export default function Home() {
         e.preventDefault()
         dispatch(orderW(e.target.value))
         setPage(1)
+        setIndex(1)
         setOrder(`${e.target.value}`)
     }
 
@@ -87,10 +93,11 @@ export default function Home() {
 
 
             { currentDogs.length ?
-            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : '' }
+            <Pagination index={index} string={dogs} dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : '' }
             <div className={h.contCard}>
             <div className={h.cards}>
-                {typeof currentDogs != 'object' || currentDogs.length===0 ? <div className={h.divLoading}><img width='300px' heigth='300px' alt="esperando" src="https://i.pinimg.com/originals/8c/21/96/8c2196780eb48b18fcce2de130a213bb.gif"/> </div> : currentDogs.map(e =>{
+                {typeof currentDogs != 'object' || currentDogs.length===0 ? <div className={h.divLoading}><img width='300px' heigth='300px' alt="esperando" src="https://i.pinimg.com/originals/8c/21/96/8c2196780eb48b18fcce2de130a213bb.gif"/> 
+                <h3>Not Found</h3> </div> : currentDogs.map(e =>{
                     return(
                         <Card key={e.id} id={e.id} name={e.name} img={e.img} weight={e.weight} temperaments={e.temperaments}   />
                     )
@@ -98,7 +105,7 @@ export default function Home() {
             </div>
             </div>
             { currentDogs.length ?
-            <Pagination dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : ''  }
+            <Pagination index={index} string={dogs} dogsPage={dogsPage} dogs={dogs.length} paginado={paginado}  /> : ''  }
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import p from '../style/pagination.module.css'
 
-export default function Pagination({dogsPage,dogs, paginado}) {
+export default function Pagination({dogsPage,dogs, paginado, string,index}) {
 
     const pageNumber= []
 
@@ -13,12 +13,15 @@ export default function Pagination({dogsPage,dogs, paginado}) {
         <div className={p.conteiner}>
             <div className={p.divUl}>
             <ul className={p.ul}>
-                {pageNumber.length && pageNumber.map(n => {
-                    return (
-                        <li className={p.li} key={n}>
-                            <button key={n} onClick={() => paginado(n)}>{n}</button>
-                        </li>
-                    )
+                {string !== 'dog not found' && pageNumber.length && pageNumber.map((n,i) => {
+               return(  index -1 === i? 
+                                <li className={p.li} key={n}>
+                                    <button className={p.index} key={n} onClick={() => paginado(n)}>{n}</button>
+                                </li>
+                         :  <li className={p.li} key={n}>
+                         <button key={n} onClick={() => paginado(n)}>{n}</button>
+                     </li>
+                  )
                 })}
             </ul>
             </div>

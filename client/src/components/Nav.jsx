@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import {getName} from '../actions/index'
 import n from '../style/nav.module.css'
+import {BiSearchAlt2} from 'react-icons/bi'
 
 export default function Nav({setPage}){
 
@@ -24,7 +25,7 @@ export default function Nav({setPage}){
             </Link>
         </div>
         <div className={n.navbar}>
-        <button className={n.btnSearch}></button>
+        <button className={n.btnSearch}><BiSearchAlt2/></button>
         <input onChange={(e) => handleSearch(e)} className={n.search} placeholder='Search...' type="search" />
         </div>
        </div>
