@@ -14,7 +14,7 @@ export default function Pagination({dogsPage,dogs, paginado, string,index}) {
             <div className={p.divUl}>
             <ul className={p.ul}>
                 {string !== 'dog not found' && pageNumber.length && pageNumber.map((n,i) => {
-               return(  index -1 === i? 
+               return(  index === i? 
                                 <li className={p.li} key={n}>
                                     <button className={p.index} key={n} onClick={() => paginado(n)}>{n}</button>
                                 </li>

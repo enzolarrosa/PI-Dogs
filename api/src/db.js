@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, DB_NAME
+  DB_USER, DB_PASSWORD, DB_HOST, DB_NAME,DB_DEPLOY
 } = process.env;
 
 let sequelize=
@@ -32,8 +32,16 @@ let sequelize=
   //  })
   //  :
    new Sequelize(
-    `postgresql://postgres:${DB_PASSWORD}@containers-us-west-113.railway.app:7427/railway`,
-    {logging: false , native: false}
+    DB_DEPLOY,
+    {
+      logging: false, 
+      native: false,
+      dialectOptions: {
+        ssl: {
+          require: true,
+        },
+      }
+    }
    );
 
 
