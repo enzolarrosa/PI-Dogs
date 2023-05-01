@@ -11,7 +11,7 @@ export default function Home() {
     
     const dispatch= useDispatch()
     const dogs= useSelector(state => state.dog)
-    const [index , setIndex] = useState(1)
+    const [index , setIndex] = useState(0)
     const [page, setPage] = useState(1)
     const [dogsPage ,] = useState(8)
     const lastDogs= page * dogsPage 
