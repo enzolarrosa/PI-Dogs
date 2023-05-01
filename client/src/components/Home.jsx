@@ -35,21 +35,21 @@ export default function Home() {
         e.preventDefault()
         dispatch(filterCreate(e.target.value))
         setPage(1)
-        setIndex(1)
+        setIndex(0)
     }
 
     function handleTemp (e) {
         e.preventDefault()
         dispatch(filterTemp(e.target.value))
         setPage(1)
-        setIndex(1)
+        setIndex(0)
     }
 
     function handleOrderName (e) {
         e.preventDefault()
         dispatch(orderName(e.target.value))
         setPage(1)
-        setIndex(1)
+        setIndex(0)
         setOrder(`${e.target.value}`)
     }
 
@@ -57,7 +57,7 @@ export default function Home() {
         e.preventDefault()
         dispatch(orderW(e.target.value))
         setPage(1)
-        setIndex(1)
+        setIndex(0)
         setOrder(`${e.target.value}`)
     }
 
