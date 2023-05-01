@@ -22,7 +22,7 @@ export default function Home() {
 
     const paginado = (pageNumber) => {
         setPage(pageNumber)
-        setIndex(pageNumber)
+        setIndex(pageNumber -1)
     }
 
     useEffect(() => {
